@@ -1,9 +1,9 @@
 import streamlit as st
+from deep_translator import GoogleTranslator
 import pandas as pd
 import numpy as np
 import altair as alt
 import joblib
-from deep_translator import GoogleTranslator
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
@@ -22,8 +22,16 @@ elif page == "Emotion Detection":
     st.title("Emotion Detection")
 
     # Load the pre-trained emotion detection model
-    model_path = "voting_emotion_classifier.pkl"
-    pipe_lr = joblib.load(model_path)
+    model_path ="C:/Users/Sanika/OneDrive/Desktop/SEM 7/Natural Language Processing/Project NLP/emotion_classifier_pipe_lr.pkl"
+    
+    try:
+        pipe_lr = joblib.load(model_path)
+    except FileNotFoundError:
+        st.error(f"Model file not found at: {model_path}. Please check the file path.")
+        st.stop()
+    except Exception as e:
+        st.error(f"An error occurred while loading the model: {e}")
+        st.stop()
 
     emotions_emoji_dict = {
         "anger": "😠 (कडक)", 
@@ -52,7 +60,7 @@ elif page == "Emotion Detection":
         <style>
         body {
             background-color: #ffffff; 
-            color: #333;  
+            color: white;  
             font-family: Arial, sans-serif;
             padding: 20px;
         }
@@ -68,7 +76,6 @@ elif page == "Emotion Detection":
             padding: 10px;
         }
         .stButton {
-            color: white;
             border-radius: 5px;
             padding: 10px 15px;
         }
@@ -98,7 +105,7 @@ elif page == "Emotion Detection":
             st.write(raw_text)
 
             st.success("Prediction")
-            emoji_icon = emotions_emoji_dict[prediction]
+            emoji_icon = emotions_emoji_dict.get(prediction, "No emoji available")
             st.write(f"{prediction}: {emoji_icon}")
             st.write(f"Confidence: {np.max(probability):.2f}")
         else:
@@ -108,8 +115,16 @@ elif page == "Visualization":
     st.title("Emotion Visualization")
 
     # Load the pre-trained emotion detection model
-    model_path = "voting_emotion_classifier.pkl"
-    pipe_lr = joblib.load(model_path)
+    model_path = "C:/Users/Sanika/OneDrive/Desktop/SEM 7/Natural Language Processing/Project NLP/emotion_classifier_pipe_lr.pkl"
+    
+    try:
+        pipe_lr = joblib.load(model_path)
+    except FileNotFoundError:
+        st.error(f"Model file not found at: {model_path}. Please check the file path.")
+        st.stop()
+    except Exception as e:
+        st.error(f"An error occurred while loading the model: {e}")
+        st.stop()
 
     def get_prediction_proba(docx):
         results = pipe_lr.predict_proba([docx])
