@@ -108,7 +108,7 @@ elif page == "Visualization":
     st.title("Emotion Visualization")
 
     # Load the pre-trained emotion detection model
-    model_path = "C:/Users/Sanika/OneDrive/Desktop/SEM 7/Natural Language Processing/Project NLP/voting_emotion_classifier.pkl"
+    model_path = "voting_emotion_classifier.pkl"
     pipe_lr = joblib.load(model_path)
 
     def get_prediction_proba(docx):
