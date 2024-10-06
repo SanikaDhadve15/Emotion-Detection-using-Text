@@ -22,7 +22,7 @@ elif page == "Emotion Detection":
     st.title("Emotion Detection")
 
     # Load the pre-trained emotion detection model
-    model_path ="C:/Users/Sanika/OneDrive/Desktop/SEM 7/Natural Language Processing/Project NLP/emotion_classifier_pipe_lr.pkl"
+    model_path ="emotion_classifier_pipe_lr.pkl"
     
     try:
         pipe_lr = joblib.load(model_path)
@@ -115,7 +115,7 @@ elif page == "Visualization":
     st.title("Emotion Visualization")
 
     # Load the pre-trained emotion detection model
-    model_path = "C:/Users/Sanika/OneDrive/Desktop/SEM 7/Natural Language Processing/Project NLP/emotion_classifier_pipe_lr.pkl"
+    model_path = "emotion_classifier_pipe_lr.pkl"
     
     try:
         pipe_lr = joblib.load(model_path)
