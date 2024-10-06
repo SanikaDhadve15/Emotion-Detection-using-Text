@@ -13,9 +13,9 @@ if page == "Project Details":
     st.title("EMOTION DETECTION USING TEXT.")
     st.markdown(""" 
     ### Emotion Detection System
-    The Emotion Detection Using Text application is a user-friendly web-based tool designed to analyze and identify emotions expressed in text inputs. Utilizing advanced natural language processing techniques, this application can detect various emotions from both English and Marathi text, providing users with immediate Visualization.
+    The Emotion Detection Using Text application is a user-friendly web-based tool designed to analyze and identify emotions expressed in text inputs. Utilizing advanced natural language processing techniques, this application can detect various emotions from both English and Marathi text, providing users with immediate visualization.
 
-    **Group Member Name:** SIDDHI AVHAD, SANIKA DHADVE, PURVAJA GANGURDE
+    **Group Member Names:** SIDDHI AVHAD, SANIKA DHADVE, PURVAJA GANGURDE
     """)
 
 elif page == "Emotion Detection":
@@ -26,9 +26,16 @@ elif page == "Emotion Detection":
     pipe_lr = joblib.load(model_path)
 
     emotions_emoji_dict = {
-        "anger": "😠", "disgust": "🤮", "fear": "😨😱",
-        "happy": "🤗", "joy": "😂", "neutral": "😐",
-        "sad": "😔", "sadness": "😔", "shame": "😳", "surprise": "😮"
+        "anger": "😠 (कडक)", 
+        "disgust": "🤮 (घृणा)", 
+        "fear": "😨😱 (भय)", 
+        "happy": "🤗 (आनंद)", 
+        "joy": "😂 (आनंद)", 
+        "neutral": "😐 (तटस्थ)", 
+        "sad": "😔 (दुखी)", 
+        "sadness": "😔 (दुखी)", 
+        "shame": "😳 (लाज)", 
+        "surprise": "😮 (आश्चर्य)"
     }
 
     def predict_emotions(docx):
