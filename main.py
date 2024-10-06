@@ -13,7 +13,7 @@ if page == "Project Details":
     st.title("EMOTION DETECTION USING TEXT.")
     st.markdown(""" 
     ### Emotion Detection System
-    This application is designed to detect emotions from text inputs using natural language processing techniques. The model is pre-trained to recognize various emotions based on the input text.
+    The Emotion Detection Using Text application is a user-friendly web-based tool designed to analyze and identify emotions expressed in text inputs. Utilizing advanced natural language processing techniques, this application can detect various emotions from both English and Marathi text, providing users with immediate Visualization.
 
     **Group Member Name:** SIDDHI AVHAD, SANIKA DHADVE, PURVAJA GANGURDE
     """)
@@ -51,7 +51,7 @@ elif page == "Emotion Detection":
         }
         h1, h2, h3 {
             font-family: 'Helvetica Neue', sans-serif;
-            color: #333;  
+            color: white;  
             padding: 10px;
             border-radius: 5px;
         }
