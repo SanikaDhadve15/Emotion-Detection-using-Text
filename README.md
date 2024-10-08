@@ -26,6 +26,8 @@ RESULTS
 The Logistic Regression achieved an accuracy of 88% on the data.
 ![Screenshot 2024-10-06 232839](https://github.com/user-attachments/assets/5f22bced-6ab5-4d7c-996e-11bb02213e63)
 ![Screenshot 2024-10-06 232358](https://github.com/user-attachments/assets/5189122b-bc40-4a39-8b0f-64d8cf701270)
-![Screenshot 2024-10-06 232255](https://github.com/user-attachments/assets/a6363962-57f6-4630-93aa-06142fd25a8a)
+    ![2](https://github.com/user-attachments/assets/f1958e17-099f-4622-a62d-ee3ea4f611b4)
+![1](https://github.com/user-attachments/assets/ecbff0d8-633c-4bcf-97fc-37ff457b84b1)
+
 
 
